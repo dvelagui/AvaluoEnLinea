@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
+
+$font-family-sans-serif:    'Source Sans Pro', sans-serif !default;
+
+/* color palette from https://www.figma.com/file/fs8VXAf54Hr55KkffnGoij/Handoff?node-id=1-158&t=GggmDtriwnWpIAA5-0 */
+$primary:       #ca1d80 !default;
+$success:       #179e32 !default;
+$info:          #2157d8 !default;
+$warning:       #ffa500 !default;
+$danger:        #c12e3d !default;
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #F5F5F5;
+  line-height: 1.6;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+}
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
