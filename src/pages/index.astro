@@ -2,6 +2,60 @@
 import Layout from "../layouts/layouts.astro";
 ---
 
-<Layout>
-	<h1>Soy EL INiCIO</h1>
+<Layout title="Inicio">
+  <section class="container text-center">
+    <!-- Titulo Pagina de Inicio -->
+    <h1>
+      Calculamos <span>en tiempo real y en línea el valor de venta</span> o renta
+      de una propiedad*
+    </h1>
+    <p>
+      * Debe encontrarse dentro de los rangos y tipos de inmuebles en las
+      ciudades y municipios donde tenemos cobertura.
+    </p>
+  </section>
 </Layout>
+
+<style scoped>
+  h1 {
+    width: 80%;
+    max-width: 864px;
+    min-width: 311px;
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #282a33;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 115px auto 13px;
+  }
+  span {
+    color: #ca1d80;
+  }
+  p {
+    width: 80%;
+    max-width: 573px;
+    min-width: 311px;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+    margin: auto;
+  }
+
+  @media (max-width: 992px) {
+    h1 {
+      font-size: 24px;
+      margin: 40px auto 8px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+</style>

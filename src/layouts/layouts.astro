@@ -1,18 +1,21 @@
 ---
-import "../assets/css/styles.css";
-import Menu from "../components/MenuAvaluo.vue";
+import { Props } from "astro";
+import "../assets/main.css";
+import MenuAvaluo from "../components/MenuAvaluo.vue";
+
+const { title } = Astro.props as Props
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/logo.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Avalúo En Línea</title>
-	</head>
-	<body>
-		<Menu />
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Avalúo En Línea | {title}</title>
+  </head>
+  <body>
+    <MenuAvaluo titlePage={title} client:load />
+    <slot />
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+  </body>
 </html>

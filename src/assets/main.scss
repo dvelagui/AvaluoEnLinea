@@ -1,3 +1,6 @@
+
+/* Google Fonts -Source Sans Pro- & -Comforta- */
+
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 
@@ -10,6 +13,9 @@ $info:          #2157d8 !default;
 $warning:       #ffa500 !default;
 $danger:        #c12e3d !default;
 
+/* NavBar */
+
+$navbar-toggler-border-radius: 20px;
 
 *,
 *::before,
