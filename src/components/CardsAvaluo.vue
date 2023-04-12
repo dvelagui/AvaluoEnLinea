@@ -1,20 +1,10 @@
 <template>
     <div class="card">
-        <img v-show="cardTitle === 'Empresas'" src='../assets/imgs/img_hero_inicio_empresas.png'
-            class="card-img-top position-relative" :alt="cardTitle" :style="cardTitle === 'Empresas' ? '' : 'height: 0;'">
-        <img v-show="cardTitle === 'Personas'" src='../assets/imgs/img_hero_inicio_personas.png'
-            class="card-img-top position-relative" :alt="cardTitle"
-            :style="cardTitle === 'Personas' ? '' : 'height: 0; visible: none'">
-        <img v-show="cardTitle === 'Avalúo certificado'" src='../assets/imgs/img_hero_inicio_avaluo.png'
-            class="card-img-top position-relative" :alt="cardTitle"
-            :style="cardTitle === 'Avalúo certificado' ? '' : 'height: 0; visible: none'">
-        <img v-show="cardTitle === 'Conexión API'" src='../assets/imgs/img_hero_inicio_API.png'
-            class="card-img-top position-relative" :alt="cardTitle"
-            :style="cardTitle === 'Conexión API' ? '' : 'height: 0; visible: none'">
+            <img :src="cardImg" class="card-img-bottom position-relative" :alt="cardTitle" :style="cardTitle === 'Empresas' || cardTitle === 'Conexión API' ? 'margin-top: 17px' : ''">       
         <div class="card-body  position-absolute">
             <h5 class="card-title">{{ cardTitle }}</h5>
             <p class="card-text">{{ cardText }}</p>
-            <a :href="cardBtn" class="btn btn-primary">Ver más →</a>
+            <a :href="cardBtn" class="btn btn-primary">{{ cardBtnText }}</a>
         </div>
     </div>
 </template>
@@ -28,13 +18,11 @@ const props = defineProps({
     cardTitle: String,
     cardText: String,
     cardBtn: String,
+    cardBtnText: String,
 });
 
-const { cardImg, cardTitle, cardText, cardBtn } = toRefs(props);
+const { cardImg, cardTitle, cardText, cardBtn, cardBtnText } = toRefs(props);
 
-
-const tpt = ["../assets/imgs/img_hero_inicio_empresas.png", "../assets/imgs/img_hero_inicio_empresas.png", "../assets/imgs/img_hero_inicio_empresas.png"
-]
 
 </script>
 
@@ -68,6 +56,7 @@ const tpt = ["../assets/imgs/img_hero_inicio_empresas.png", "../assets/imgs/img_
 }
 
 .btn {
+    font-family: 'Source Sans Pro';
     border-radius: 32px;
     font-weight: 600;
     font-size: 14px;
