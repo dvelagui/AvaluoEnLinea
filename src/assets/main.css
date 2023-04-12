@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap");
 /* color palette from https://www.figma.com/file/fs8VXAf54Hr55KkffnGoij/Handoff?node-id=1-158&t=GggmDtriwnWpIAA5-0 */
 /* NavBar */
+/* Cards */
 *,
 *::before,
 *::after {
@@ -4356,9 +4357,9 @@ textarea.form-control-lg {
   --bs-card-subtitle-color: ;
   --bs-card-border-width: var(--bs-border-width);
   --bs-card-border-color: var(--bs-border-color-translucent);
-  --bs-card-border-radius: var(--bs-border-radius);
+  --bs-card-border-radius: none;
   --bs-card-box-shadow: ;
-  --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+  --bs-card-inner-border-radius: calc(none - (var(--bs-border-width)));
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
   --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);

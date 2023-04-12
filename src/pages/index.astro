@@ -1,9 +1,11 @@
 ---
+import CardsAvaluo from "../components/CardsAvaluo.vue";
+import CarouselAvaluo from "../components/CarouselAvaluo.vue";
 import Layout from "../layouts/layouts.astro";
 ---
 
 <Layout title="Inicio">
-  <section class="container text-center">
+  <section class="container">
     <!-- Titulo Pagina de Inicio -->
     <h1>
       Calculamos <span>en tiempo real y en línea el valor de venta</span> o renta
@@ -13,49 +15,89 @@ import Layout from "../layouts/layouts.astro";
       * Debe encontrarse dentro de los rangos y tipos de inmuebles en las
       ciudades y municipios donde tenemos cobertura.
     </p>
+    <div class="row mt-5 hero-banner">
+      <CardsAvaluo
+        card-img="../assets/imgs/img_hero_inicio_personas.png"
+        card-title="Empresas"
+        card-text="Ten herramientas para apoyar mejor tu proceso de ventas."
+        card-btn="/empresas"
+      />
+      <CardsAvaluo
+        card-img="../assets/imgs/img_hero_inicio_personas.png"
+        card-title="Personas"
+        card-text="¿Quieres vender, comprar o arrendar una propiedad y tienes dudas sobre su valor?"
+        card-btn="/personas"
+      />
+      <CardsAvaluo
+        card-img="../assets/imgs/img_hero_inicio_personas.png"
+        card-title="Avalúo certificado"
+        card-text="Solicita un informe técnico firmado por un perito inscrito en el RAA."
+        card-btn="/avaluo-certificado"
+      />
+      <CardsAvaluo
+        card-img="../assets/imgs/img_hero_inicio_personas.png"
+        card-title="Conexión API"
+        card-text="Conecta la API a tus desarrollos y obtén todas las funcionalidades."
+        card-btn="/conexion-api"
+      />
+    </div>
+    <div class="row mt-5 carousel-banner">
+      <CarouselAvaluo />
+    </div>
   </section>
-</Layout>
 
-<style scoped>
-  h1 {
-    width: 80%;
-    max-width: 864px;
-    min-width: 311px;
-    font-family: "Comfortaa";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 120%;
-    text-align: center;
-    letter-spacing: -0.05em;
-    color: #282a33;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 115px auto 13px;
-  }
-  span {
-    color: #ca1d80;
-  }
-  p {
-    width: 80%;
-    max-width: 573px;
-    min-width: 311px;
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 120%;
-    letter-spacing: -0.01em;
-    color: #6b7082;
-    margin: auto;
-  }
-
-  @media (max-width: 992px) {
+  <style scoped>
     h1 {
-      font-size: 24px;
-      margin: 40px auto 8px;
+      width: 80%;
+      max-width: 864px;
+      min-width: 311px;
+      font-family: "Comfortaa";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 120%;
+      text-align: center;
+      letter-spacing: -0.05em;
+      color: #282a33;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin: 115px auto 13px;
+    }
+    span {
+      color: #ca1d80;
     }
     p {
+      width: 80%;
+      max-width: 573px;
+      min-width: 311px;
+      font-family: "Source Sans Pro";
+      font-style: normal;
+      font-weight: 400;
       font-size: 12px;
+      line-height: 120%;
+      letter-spacing: -0.01em;
+      color: #6b7082;
+      margin: auto;
     }
-  }
-</style>
+
+    .carousel-banner {
+      display: none;
+    }
+    
+
+    @media (max-width: 992px) {
+      h1 {
+        font-size: 24px;
+        margin: 40px auto 8px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .hero-banner {
+        display: none;
+      }
+      .carousel-banner {
+        display: block;
+      }
+    }
+  </style>
+</Layout>
