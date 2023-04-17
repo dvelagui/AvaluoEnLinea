@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="hero-carousel" class="carousel slide" data-bs-interval="5000" data-bs-touch="true" data-bs-ride="carousel">
+        <div id="hero-carousel" class="carousel slide" data-bs-interval="5000" data-bs-touch="true" >
             <div class="carousel-indicators" >
                 <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -57,6 +57,7 @@
                 </div>
 
             </div>
+            
         </div>
         <!--   Hero Banner Cards Sections -->
     </div>

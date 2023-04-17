@@ -41,8 +41,7 @@ const openMenu = (action) => {
 }
 
 const btnAccess = () => {
-    alert("Vas Ingresar")
-    console.log("si estoy");
+    alert("QUieres Ingresar???")
 }
 
 
@@ -129,9 +128,9 @@ const links = [
     display: block;
 }
 
-.nav-item:hover {
-    color: black;
+.nav-link:hover {
     font-weight: 500;
+    z-index: 99;
 }
 
 .nav-link:hover .selection {
@@ -173,6 +172,9 @@ const links = [
 .nav-btn-access{
     margin: 0 auto;
     width: 80%;
+}
+.selection, .selection.active {
+    display: none;
 }
 }
 
