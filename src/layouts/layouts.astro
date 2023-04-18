@@ -1,8 +1,9 @@
 ---
 import "../assets/css/styles.css";
+import FooterAvaluo from "../components/FooterAvaluo.vue";
 import MenuAvaluo from "../components/MenuAvaluo.vue";
 import { Props } from "astro";
-const { title } = Astro.props as Props
+const { pageTitle, pageDescription } = Astro.props as Props
 ---
 
 <html lang="es">
@@ -10,12 +11,15 @@ const { title } = Astro.props as Props
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Calculamos en tiempo real y en línea el valor de venta o renta de una propiedad">
-    <title>Avalúo En Línea | {title}</title>
+    <meta name="description" content={pageDescription}>
+    <title>Avalúo En Línea | {pageTitle}</title>
   </head>
   <body>
-    <MenuAvaluo titlePage={title} client:load />
-    <slot />
+    <MenuAvaluo titlePage={pageTitle} client:load />
+    <main class="container">
+      <slot />
+    </main>
+    <FooterAvaluo />
     <script src="bootstrap/dist/js/bootstrap.js"></script>
   </body>
 </html>

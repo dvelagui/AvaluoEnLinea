@@ -1,7 +1,7 @@
 <template>
     <div class="card">
             <img :src="cardImg" class="card-img-bottom position-relative" :alt="cardTitle" :style="cardTitle === 'Empresas' || cardTitle === 'Conexión API' ? 'margin-top: 17px' : ''">       
-        <div class="card-body  position-absolute">
+        <div class="card-body position-absolute">
             <h5 class="card-title">{{ cardTitle }}</h5>
             <p class="card-text">{{ cardText }}</p>
             <a :href="cardBtn" class="btn btn-primary">{{ cardBtnText }}</a>

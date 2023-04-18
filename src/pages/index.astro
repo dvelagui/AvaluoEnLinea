@@ -1,107 +1,107 @@
 ---
-import CardsAvaluo from "../components/CardsAvaluo.vue";
+import CardsAvaluo from "../components/CardsHeroAvaluo.vue";
 import CarouselAvaluo from "../components/CarouselAvaluo.vue";
 import Layout from "../layouts/layouts.astro";
 ---
 
-<Layout title="Inicio">
-  <section class="container">
-    <!-- Titulo Pagina de Inicio -->
-    <h1>
-      Calculamos <span>en tiempo real y en línea el valor de venta</span> o renta
-      de una propiedad*
-    </h1>
-    <p>
-      * Debe encontrarse dentro de los rangos y tipos de inmuebles en las
-      ciudades y municipios donde tenemos cobertura.
-    </p>
-    <div class="row mt-5 hero-banner">
-      <CardsAvaluo
-        card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_empresas.png?alt=media&token=7debb63b-1708-42e9-8596-750add0e01b7"
-        card-title="Empresas"
-        card-text="Ten herramientas para apoyar mejor tu proceso de ventas."
-        card-btn="/empresas"
-        card-btn-text="Ver más →"
-      />
-      <CardsAvaluo
-        card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_personas.png?alt=media&token=7e749742-8b7c-45fd-8698-8750ae18e163"
-        card-title="Personas"
-        card-text="¿Quieres vender, comprar o arrendar una propiedad y tienes dudas sobre su valor?"
-        card-btn="/personas"
-        card-btn-text="Haz tu avalúo →"
-      />
-      <CardsAvaluo
-        card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_avaluo.png?alt=media&token=e08e26d4-0aa8-465b-ad72-983f659d51cf"
-        card-title="Avalúo Certificado"
-        card-text="Solicita un informe técnico firmado por un perito inscrito en el RAA."
-        card-btn="/avaluo-certificado"
-        card-btn-text="Conoce más →"
-      />
-      <CardsAvaluo
-        card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_API.png?alt=media&token=653296ff-7a48-438c-8f9b-4ff8b37cb1d5"
-        card-title="Conexión API"
-        card-text="Conecta la API a tus desarrollos y obtén todas las funcionalidades."
-        card-btn="/conexion-api"
-        card-btn-text="Ingresar →"
-      />
-    </div>
-    <div class="row mt-5 carousel-banner">
-      <CarouselAvaluo />
-    </div>
-  </section>
+<Layout
+  pageTitle="Inicio"
+  pageDescription="Calculamos en tiempo real y en línea el valor de venta o renta de una propiedad"
+>
+  <!-- Titulo Pagina de Inicio -->
+  <h1>
+    Calculamos <span>en tiempo real y en línea el valor de venta</span> o renta de
+    una propiedad*
+  </h1>
+  <p>
+    * Debe encontrarse dentro de los rangos y tipos de inmuebles en las ciudades
+    y municipios donde tenemos cobertura.
+  </p>
+  <div class="row mt-5 hero-banner">
+    <CardsAvaluo
+      card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_empresas.png?alt=media&token=7debb63b-1708-42e9-8596-750add0e01b7"
+      card-title="Empresas"
+      card-text="Ten herramientas para apoyar mejor tu proceso de ventas."
+      card-btn="/empresas"
+      card-btn-text="Ver más →"
+    />
+    <CardsAvaluo
+      card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_personas.png?alt=media&token=7e749742-8b7c-45fd-8698-8750ae18e163"
+      card-title="Personas"
+      card-text="¿Quieres vender, comprar o arrendar una propiedad y tienes dudas sobre su valor?"
+      card-btn="/personas"
+      card-btn-text="Haz tu avalúo →"
+    />
+    <CardsAvaluo
+      card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_avaluo.png?alt=media&token=e08e26d4-0aa8-465b-ad72-983f659d51cf"
+      card-title="Avalúo Certificado"
+      card-text="Solicita un informe técnico firmado por un perito inscrito en el RAA."
+      card-btn="/avaluo-certificado"
+      card-btn-text="Conoce más →"
+    />
+    <CardsAvaluo
+      card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_API.png?alt=media&token=653296ff-7a48-438c-8f9b-4ff8b37cb1d5"
+      card-title="Conexión API"
+      card-text="Conecta la API a tus desarrollos y obtén todas las funcionalidades."
+      card-btn="/conexion-api"
+      card-btn-text="Ingresar →"
+    />
+  </div>
+  <div class="row mt-5 carousel-banner">
+    <CarouselAvaluo />
+  </div>
+</Layout>
 
-  <style scoped>
+<style scoped>
+  h1 {
+    width: 80%;
+    max-width: 864px;
+    min-width: 311px;
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    letter-spacing: -0.05em;
+    color: #282a33;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 115px auto 13px;
+  }
+  span {
+    color: #ca1d80;
+  }
+  p {
+    width: 80%;
+    max-width: 573px;
+    min-width: 311px;
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+    margin: auto;
+  }
+
+  .carousel-banner {
+    display: none;
+  }
+
+  @media (max-width: 992px) {
     h1 {
-      width: 80%;
-      max-width: 864px;
-      min-width: 311px;
-      font-family: "Comfortaa";
-      font-style: normal;
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 120%;
-      text-align: center;
-      letter-spacing: -0.05em;
-      color: #282a33;
-      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      margin: 115px auto 13px;
-    }
-    span {
-      color: #ca1d80;
+      font-size: 24px;
+      margin: 40px auto 8px;
     }
     p {
-      width: 80%;
-      max-width: 573px;
-      min-width: 311px;
-      font-family: "Source Sans Pro";
-      font-style: normal;
-      font-weight: 400;
       font-size: 12px;
-      line-height: 120%;
-      letter-spacing: -0.01em;
-      color: #6b7082;
-      margin: auto;
     }
-
-    .carousel-banner {
+    .hero-banner {
       display: none;
     }
-    
-
-    @media (max-width: 992px) {
-      h1 {
-        font-size: 24px;
-        margin: 40px auto 8px;
-      }
-      p {
-        font-size: 12px;
-      }
-      .hero-banner {
-        display: none;
-      }
-      .carousel-banner {
-        display: block;
-      }
+    .carousel-banner {
+      display: block;
     }
-  </style>
-</Layout>
+  }
+</style>
