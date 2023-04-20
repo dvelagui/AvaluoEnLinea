@@ -4,7 +4,7 @@
         <div class="container">
             <nav class="row">
                 <a href="/" class="col-md-2 col-12 d-flex align-items-center justify-content-center my-3 mt-md-0">
-                    <img src="../assets/imgs/Logo-white.png" alt="Loogo Avaluo" class="img-logo">
+                    <img src="src/assets/imgs/Logo-white.png" alt="Loogo Avaluo" class="img-logo">
                 </a>
                 <ul class="col-md-2 col-6 list-unstyled d-flex flex-column  p-md-4 px-4 py-2 mb-0">
                     <li class="nav-item">
@@ -42,16 +42,16 @@
                         </li>
                         <li class="nav-item ml-2 d-flex justify-content-start">
                             <a class="nav-link px-2" href="#">
-                                <img src="../assets/imgs/instagram.png" alt="Instagram">
+                                <img src="src/assets/imgs/instagram.png" alt="Instagram">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="../assets/imgs/twitter.png" alt="Twitter">
+                                <img src="src/assets/imgs/twitter.png" alt="Twitter">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="../assets/imgs/facebook.png" alt="Facebook">
+                                <img src="src/assets/imgs/facebook.png" alt="Facebook">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="../assets/imgs/linkedIn.png" alt="LinkedIn">
+                                <img src="src/assets/imgs/linkedIn.png" alt="LinkedIn">
                             </a>
                         </li>
                     </ul>

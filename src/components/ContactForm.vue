@@ -2,6 +2,7 @@
     <div class="contact-form mt-5 mb-5">
         <div class="row d-flex justify-content-center">
             <div class=" col-12 col-md-6">
+                <img class="contact-form_img my-1" src="src/assets/imgs/arrow_right.svg" alt="Contact">
                 <h6 class="contact-form_title">Contáctanos</h6>
                 <p class="contact-form_p">
                     Si tienes cualquier duda o comentario, escríbenos
@@ -85,6 +86,10 @@ registro completo
 </script>
 
 <style lang="scss" scoped>
+
+.contact-form_img {
+    display: none;
+}
 .contact-form_title {
     font-weight: 600;
     font-size: 48px;
@@ -140,4 +145,26 @@ registro completo
     background-color: #FFFFFF;
 
 }
+@media (max-width: 992px) {
+    .contact-form_img {
+    display: block;
+    width: 30px;
+    transform: rotate(90deg);
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-form_title {
+  margin: 0 auto;
+  text-align: center;
+font-size: 32px;
+}
+.contact-form_title::before {
+  display: none;
+}
+.contact-form_p  {
+    text-align: center;
+    margin-top: 10px;
+}
+}
+
 </style>
