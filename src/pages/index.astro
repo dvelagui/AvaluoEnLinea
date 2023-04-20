@@ -1,6 +1,8 @@
 ---
 import CardsAvaluo from "../components/CardsHeroAvaluo.vue";
+import CardsFeatures from "../components/CardsFeatures.vue";
 import CarouselAvaluo from "../components/CarouselAvaluo.vue";
+import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
 ---
 
@@ -17,6 +19,7 @@ import Layout from "../layouts/layouts.astro";
     * Debe encontrarse dentro de los rangos y tipos de inmuebles en las ciudades
     y municipios donde tenemos cobertura.
   </p>
+  <!--  Hero Banner Avaluo -->
   <div class="row mt-5 hero-banner">
     <CardsAvaluo
       card-img="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_inicio_empresas.png?alt=media&token=7debb63b-1708-42e9-8596-750add0e01b7"
@@ -47,11 +50,159 @@ import Layout from "../layouts/layouts.astro";
       card-btn-text="Ingresar →"
     />
   </div>
+  <!--   Carousel Mobile -->
   <div class="row mt-5 carousel-banner">
     <CarouselAvaluo />
   </div>
-</Layout>
+  <!--  Statistics -->
+  <div>
+    <h3 class="text-center mt-3">
+      Cada vez más personas y empresas saben el precio justo de sus inmuebles
+    </h3>
+  </div>
+  <div
+    class="row d-flex flex-column flex-md-row justify-content-center align-items-center my-5"
+  >
+    <div class="row col-md-6 col-12">
+      <p class="col-12 statistic text-center">+15.000</p>
+      <p class="col-12 statistic-text text-center mt-4">
+        Avalúos en línea por medio de nuestra plataforma
+      </p>
+    </div>
+    <div class="row col-md-6 col-12 mt-md-0 mt-5">
+      <p class="col-12 statistic text-center">+4.000</p>
+      <p class="col-12 statistic-text text-center mt-4">
+        Avalúos certificados con visita de perito
+      </p>
+    </div>
+  </div>
+  <!--  Features -->
+  <h4 class="text-center">¿Por qué usar Avalúo en línea?</h4>
+  <div
+    class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-5 shadow-lg rounded-3 cards-features"
+  >
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Frapido.png?alt=media&token=79d8bcfb-3b57-43fa-a2da-772c6187f4f2"
+      FeaturesTitle="Rápido y desde cualquier lugar"
+      FeaturesText="Haz tu reporte* (informativo o completo) en línea desde cualquier dispositivo y recíbelo en menos de 5 minutos."
+      FeaturesUrl=" Descargar ejemplo"
+      FeaturesText2="* Este reporte no sirve para trámites legales ni bancarios"
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fprecio.png?alt=media&token=3c39aa37-1156-4dc9-ab52-0d55278e13c2"
+      FeaturesTitle="Precio justo e informado"
+      FeaturesText="Dentro del reporte encontrarás todos los datos** que usamos para darte tu rango de precio de venta como el precio de arriendo."
+      FeaturesUrl=""
+      FeaturesText2="** Aplica para el reporte completo o el avalúo certificado"
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fherramienta.png?alt=media&token=21f9fc2c-62d4-4b6d-8f2b-09faffb5478e"
+      FeaturesTitle="Herramienta de apoyo"
+      FeaturesText="Dentro de nuestra plataforma*** encontrarás diferentes herramientas que pueden apoyar tu proceso de venta y arriendo de inmuebles."
+      FeaturesUrl=""
+      FeaturesText2="*** Incluido dentro de cualquier plan pago para empresas"
+    />
+  </div>
+  <!--   Request Report -->
+  <div
+    class="request-report d-flex flex-column justify-content-center align-items-center mt-5"
+  >
+    <p class="request-report_text text-center">
+      ¿Necesitas un avalúo certificado. Fácil, rápido y firmado por un perito
+      registrado? Podemos ayudarte
+    </p>
+    <a class="request-report_btn" href="#contactForm">Solicitar avalúo certificado</a>
+  </div>
+  <!-- Companies -->
+  <h4 class="text-center">Empresas que usan nuestros servicios</h4>
+  <div
+    class="companies d-flex justify-content-center align-items-center text-center"
+  >
+    <img src="src/assets/imgs/engel.png" alt="" class="col-3 col-md-1 m-3" />
+    <img src="src/assets/imgs/habi.png" alt="" class="col-3 col-md-1 m-3" />
+    <img src="src/assets/imgs/aliadas.png" alt="" class="col-3 col-md-1 m-3" />
+    <img
+      src="src/assets/imgs/bogota.png"
+      alt=""
+      class="col-1 m-3 d-none d-md-block"
+    />
+    <img
+      src="src/assets/imgs/oikos.png"
+      alt=""
+      class="col-1 m-3 d-none d-md-block"
+    />
+    <img
+      src="src/assets/imgs/santa_ana.png"
+      alt=""
+      class="col-1 m-3 d-none d-md-block"
+    />
+    <img
+      src="src/assets/imgs/pads.png"
+      alt=""
+      class="col-1 m-3 d-none d-md-block"
+    />
+  </div>
+  <!-- Testimonials -->
 
+  <h4 class="text-center">Ellos confiaron en nosotros</h4>
+  <div
+    class="testimonials row d-flex justify-content-center align-items-start text-center mt-5"
+  >
+    <div
+      class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center text-center mt-4 mt-md-0"
+    >
+      <img
+        class="testimonials-img"
+        src="src/assets/imgs/foto_testimonio_1.png"
+        alt=""
+      />
+      <p class="testimonials-text">
+        “Con Avalúo en Línea confirme el valor correcto de venta de mi
+        apartamento. Fácil e inmediato. Muy recomendado”
+      </p>
+      <p class="testimonials-name">– Rodrigo</p>
+    </div>
+    <div
+      class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center text-center mt-4 mt-md-0"
+    >
+      <img
+        class="testimonials-img"
+        src="src/assets/imgs/foto_testimonio_2.png"
+        alt=""
+      />
+      <p class="testimonials-text">
+        “Como agente inmobiliario profesional y en mercados de cambio como el
+        actual, AEL me ha ayudado a asesorar a mis potenciales compradores con
+        criterios basados en estadísticas del mercado actual y mucho enfoque
+        para lograr mis objetivos y avanzar con mis propósitos en beneficio de
+        mis clientes”
+      </p>
+      <p class="testimonials-name">– Mally</p>
+    </div>
+    <div
+      class="col-12 col-md-3 d-flex flex-column justify-content-center align-items-center text-center mt-4 mt-md-0"
+    >
+      <img
+        class="testimonials-img"
+        src="src/assets/imgs/foto_testimonio_3.png"
+        alt=""
+      />
+      <p class="testimonials-text">
+        “Gracias a Avalúo en Línea ahorre tiempo y dinero al saber de forma
+        inmediata y técnica el valor de mi propiedad, pude contrastar la
+        información y tomar mejores desiciones.”
+      </p>
+      <p class="testimonials-name">– David</p>
+    </div>
+  </div>
+  <!-- Contact Form -->
+<ContactForm id="contactForm" client:visible />
+
+ 
+</Layout>
 <style scoped>
   h1 {
     width: 80%;
@@ -85,14 +236,133 @@ import Layout from "../layouts/layouts.astro";
     margin: auto;
   }
 
+  h3 {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+    width: 100%;
+    max-width: 520px;
+    margin: 7px auto;
+  }
+
+  h4 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin-top: 88px;
+  }
+
   .carousel-banner {
     display: none;
   }
 
+  .statistic {
+    font-weight: 600;
+    font-size: 104px;
+    line-height: 72%;
+    color: #2d59f5;
+  }
+
+  .statistic-text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.01em;
+    color: #282a33;
+  }
+
+  .cards-features {
+    background: #ffffff;
+    border: 2px solid #f6f7fa;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 1251px;
+  }
+
+  .request-report {
+    background-image: url("../assets/imgs/banner_request_report.png");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+
+  .request-report_text {
+    font-family: "Comfortaa";
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+    margin: 72px auto 32px auto;
+  }
+
+  .request-report_btn {
+    width: 100%;
+    max-width: 228px;
+    color: #282a33;
+    padding: 14px 24px;
+    border: 2px solid #282a33;
+    border-radius: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 32px auto 200px auto;
+    font-size: 14px;
+    background-color: #ffffff;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .testimonials-img {
+    width: 250px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .testimonials-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+    margin-top: 24px;
+  }
+
+  .testimonials-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #282a33;
+    margin-top: 8px;
+  }
+ 
   @media (max-width: 992px) {
     h1 {
       font-size: 24px;
       margin: 40px auto 8px;
+    }
+    h3 {
+      font-size: 22px;
+    }
+    .statistic {
+      font-size: 64px;
+    }
+
+    .statistic-text {
+      font-size: 16px;
+    }
+    h4 {
+      font-size: 24px;
     }
     p {
       font-size: 12px;
@@ -102,6 +372,9 @@ import Layout from "../layouts/layouts.astro";
     }
     .carousel-banner {
       display: block;
+    }
+    .request-report_text {
+      font-size: 20px;
     }
   }
 </style>

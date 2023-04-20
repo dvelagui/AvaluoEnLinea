@@ -1,0 +1,143 @@
+<template>
+    <div class="contact-form mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class=" col-12 col-md-6">
+                <h6 class="contact-form_title">Contáctanos</h6>
+                <p class="contact-form_p">
+                    Si tienes cualquier duda o comentario, escríbenos
+                </p>
+            </div>
+        </div>
+
+
+        <form @submit.prevent="sendContactForm">
+            <div class="row g-3 d-flex justify-content-center mt-0 mt-md-1">
+                <div class="col-12 col-md-3">
+                    <label class="contact-form_label form-label" for="nameInput">Nombre</label>
+                    <input class="contact-form_email form-control" type="text" name="nameInput" v-model="nameInput"
+                        placeholder="Escribe tu nombre completo" />
+                </div>
+                <div class="col-12 col-md-3">
+                    <label class="contact-form_label form-label" for="telInput">Celular</label>
+                    <input class="contact-form_tel form-control" type="tel" name="telInput" v-model="telInput"
+                        placeholder="Escribe tu numero de celular" />
+                </div>
+            </div>
+            <div class="row g-3 d-flex justify-content-center mt-0 mt-md-1">
+                <div class="col-12 col-md-3">
+                    <label class="contact-form_label form-label" for="emailInput">Correo electrónico</label>
+                    <input class="contact-form_email form-control" type="email" name="emailInput" v-model="emailInput"
+                        placeholder="correoelectronico@email.com" />
+                </div>
+                <div class="col-12 col-md-3">
+                    <label class="contact-form_label form-label" for="companyInput">Empresa (opcional)</label>
+                    <input class="contact-form_tel form-control" type="text" name="conpanyInput" v-model="companyInput"
+                        placeholder="Escribe el nombre de la empresa" />
+                </div>
+            </div>
+            <div class="row g-3 d-flex justify-content-center mt-0 mt-md-1">
+                <div class="col-12 col-md-6">
+                    <label class="contact-form_label form-label" for="messageInput">Mensaje</label>
+                    <textarea class="contact-form_tel form-control" name="messageInput" v-model="messageInput" cols="30"
+                        rows="3" placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+            </div>
+            <div class="row g-3 d-flex justify-content-center mt-1">
+                <div class="col-12 col-md-6">
+                    <input type="checkbox" v-model="checkTerms" class="form-check-input" />
+                    <label for="checkTerms" class="form-check-label ms-2">
+                        Acepto Terminos y Condiciones</label>
+                </div>
+            </div>
+            <div class="row g-3 d-flex justify-content-center mt-1">
+                <div class="col-12 col-md-6">
+                    <input class="btn-submit" type="submit" value="Enviar" />
+                </div>
+            </div>
+        </form>
+    </div>
+</template>
+
+<script setup>
+import { ref } from "vue";
+
+const nameInput = ref();
+const telInput = ref();
+const emailInput = ref();
+const companyInput = ref();
+const messageInput = ref();
+const checkTerms = ref();
+
+const sendContactForm = () => {
+    alert(`
+    
+${nameInput.value}
+${telInput.value}
+${emailInput.value}
+${companyInput.value}
+${messageInput.value}
+${checkTerms.value}
+
+registro completo
+    `);
+}
+
+</script>
+
+<style lang="scss" scoped>
+.contact-form_title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000000;
+  margin-left: -75px;
+
+}
+.contact-form_title::before {
+  content:url('src/assets/imgs/arrow_right.svg');
+  margin-right: 40px;
+  display: inline;
+}
+
+.contact-form_p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #6B7082;
+}
+
+.form-control {
+    border: 2px solid #c1c6d5;
+    border-radius: 4px;
+    line-height: 2.5;
+}
+
+.btn-submit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 24px;
+    width: 104px;
+    height: 48px;
+    border-radius: 32px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto 16px;
+    background-color: #ca1d80;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+
+}
+
+.btn-submit:hover {
+    color: #282A33;
+    border: 2px solid #282A33;
+    background-color: #FFFFFF;
+
+}
+</style>
