@@ -1,9 +1,9 @@
 <template>
-    <div class="card" :style="FeaturesTitle === 'Precio justo e informado' ? 'border-left: 1px solid #E9EBF1; border-right: 1px solid #E9EBF1;' : ' '" >
-        <img :src="FeaturesImg" class="card-img-top" :alt="FeaturesText">
+    <div class="card-features card" :style="FeaturesTitle === 'Precio justo e informado' ? 'border-left: 1px solid #E9EBF1; border-right: 1px solid #E9EBF1;' : ' '" >
+        <img :src="FeaturesImg" class="card-features_img card-img-top" :alt="FeaturesText">
         <div class="card-body">
-            <h5 class="card-title">{{ FeaturesTitle }}</h5>
-            <p class="card-text">{{ FeaturesText }} <a download href="#">{{ FeaturesUrl }}</a></p>
+            <h5 class="card-features_h5 card-title">{{ FeaturesTitle }}</h5>
+            <p class="card-features_p card-text">{{ FeaturesText }} <a download href="#">{{ FeaturesUrl }}</a></p>
             <p class="card-text card-text2">{{ FeaturesText2 }}</p>
         </div>
     </div>
@@ -25,7 +25,7 @@ const { FeaturesImg, FeaturesTitle, FeaturesUrl, FeaturesText, FeaturesText2 } =
 </script>
 
 <style lang="scss" scoped>
-.card {
+.card-features{
     width: 100%;
     max-width: 417px;
     padding: 40px 32px 10px 32px;    
@@ -33,13 +33,13 @@ const { FeaturesImg, FeaturesTitle, FeaturesUrl, FeaturesText, FeaturesText2 } =
     border: none;
 }
 
-.card-img-top {
+.card-features_img {
     width: 70px;
     text-align: center;
     margin: 0 auto;
 }
 
-h5 {
+.card-features_h5 {
     font-weight: 600;
     font-size: 20px;
     line-height: 120%;
@@ -48,7 +48,7 @@ h5 {
     color: #282A33;
 }
 
-.card-text {
+.card-features_p {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;

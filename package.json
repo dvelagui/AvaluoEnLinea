@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "purge": "purgecss --css src/assets/main.css --content src/pages/index.astro src/**/*.vue --output src/assets/css/styles.css"
+    "purge": "purgecss --css src/assets/main.css --content src/pages/index.astro src/**/*.vue src/**/*.astro --output src/assets/css/styles.css"
   },
   "dependencies": {
     "@astrojs/vue": "^2.1.1",

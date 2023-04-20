@@ -13,6 +13,13 @@
   padding: 0;
 }
 
+body {
+  background: #F5F5F5;
+  line-height: 1.5;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+}
+
 /*!
  * Bootstrap  v5.3.0-alpha3 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -146,6 +153,19 @@
   :root {
     scroll-behavior: smooth;
   }
+}
+
+body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h1, .h1 {

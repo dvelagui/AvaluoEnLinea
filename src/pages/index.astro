@@ -1,9 +1,9 @@
 ---
-import CardsAvaluo from "../components/CardsHeroAvaluo.vue";
-import CardsFeatures from "../components/CardsFeatures.vue";
-import CarouselAvaluo from "../components/CarouselAvaluo.vue";
-import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
+import CardsAvaluo from "../components/CardsHeroAvaluo.vue";
+import CarouselAvaluo from "../components/CarouselAvaluo.vue";
+import CardsFeatures from "../components/CardsFeatures.vue";
+import ContactForm from "../components/ContactForm.vue";
 ---
 
 <Layout
@@ -11,7 +11,7 @@ import Layout from "../layouts/layouts.astro";
   pageDescription="Calculamos en tiempo real y en línea el valor de venta o renta de una propiedad"
 >
   <!-- Titulo Pagina de Inicio -->
-  <h1>
+  <h1 class="title-page">
     Calculamos <span>en tiempo real y en línea el valor de venta</span> o renta de
     una propiedad*
   </h1>
@@ -204,7 +204,7 @@ import Layout from "../layouts/layouts.astro";
  
 </Layout>
 <style scoped>
-  h1 {
+ .title-page {
     width: 80%;
     max-width: 864px;
     min-width: 311px;
