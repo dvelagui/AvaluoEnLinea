@@ -100,7 +100,7 @@ registro completo
 
 }
 .contact-form_title::before {
-  content:url('src/assets/imgs/arrow_right.svg');
+  content:url('https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Farrow_right.svg?alt=media&token=1397e239-f6b6-4828-9c3b-1b45696d6415');
   margin-right: 40px;
   display: inline;
 }
