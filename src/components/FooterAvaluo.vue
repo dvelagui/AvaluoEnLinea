@@ -4,7 +4,7 @@
         <div class="container">
             <nav class="row">
                 <a href="/" class="col-md-2 col-12 d-flex align-items-center justify-content-center my-3 mt-md-0">
-                    <img src="src/assets/imgs/Logo-white.png" alt="Loogo Avaluo" class="img-logo">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FLogo-white.png?alt=media&token=c9b9643d-4c31-4260-9ecd-ab9072cae3ca" alt="Loogo Avaluo" class="img-logo">
                 </a>
                 <ul class="col-md-2 col-6 list-unstyled d-flex flex-column  p-md-4 px-4 py-2 mb-0">
                     <li class="nav-item">
@@ -42,16 +42,16 @@
                         </li>
                         <li class="nav-item ml-2 d-flex justify-content-start">
                             <a class="nav-link px-2" href="#">
-                                <img src="src/assets/imgs/instagram.png" alt="Instagram">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Finstagram.png?alt=media&token=05398746-f2cf-4de5-ada9-cbc484e6bb0a" alt="Instagram">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="src/assets/imgs/twitter.png" alt="Twitter">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Ftwitter.png?alt=media&token=d75a355c-8dc2-4458-bd48-99394501f0b4" alt="Twitter">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="src/assets/imgs/facebook.png" alt="Facebook">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Ffacebook.png?alt=media&token=c7c32c5d-c640-47f6-ae4d-e4a82e2d3d3c" alt="Facebook">
                             </a>
                             <a class="nav-link px-2" href="#">
-                                <img src="src/assets/imgs/linkedIn.png" alt="LinkedIn">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FlinkedIn.png?alt=media&token=898a7035-294f-4a53-8836-6d421416df5d" alt="LinkedIn">
                             </a>
                         </li>
                     </ul>
