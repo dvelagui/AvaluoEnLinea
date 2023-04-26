@@ -15,7 +15,7 @@ const { pageTitle, pageDescription } = Astro.props as Props
     <title>Avalúo En Línea | {pageTitle}</title>
   </head>
   <body>
-    <MenuAvaluo titlePage={pageTitle} client:load />
+    <MenuAvaluo titlePage={pageTitle} client:idle />
     <main class="container">
       <slot />
     </main>

@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-import { toRefs, computed } from 'vue';
+import { toRefs } from 'vue';
 
 
 const props = defineProps({
@@ -64,7 +64,6 @@ const { cardImg, cardTitle, cardText, cardBtn, cardBtnText } = toRefs(props);
     text-align: center;
     letter-spacing: -0.01em;
     color: #FFFFFF;
-
 }
 
 @media (max-width: 992px) {

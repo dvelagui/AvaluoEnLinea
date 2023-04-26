@@ -1,7 +1,270 @@
 ---
+import HeroBannerAvaluo from "../components/HeroBannerAvaluo.vue";
+import ItemsSolutions from "../components/ItemsSolutions.vue";
+import CardsFeatures from "../components/CardsFeatures.vue";
+import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
 ---
 
 <Layout pageTitle="Empresas">
-	<h1>EMPRESAS</h1>
+  <!-- Hero Banner Empresas -->
+  <HeroBannerAvaluo
+    titleBanner="Empresas"
+    subtitleBanner="Ten herramientas de avalúo para apoyar tu proceso de ventas"
+    btnBanner1="Ver más"
+    btnBanner2="Ingresa"
+    imgBanner="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_empresas_page.png?alt=media&token=725bcb5e-10a0-4261-9057-0fd12dce8bb8"
+    imgBannerMobile="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_empresas_movil.png?alt=media&token=3be30f4b-e2e2-4648-ba69-a1920367eb86"
+  />
+
+  <!-- Content Empresas -->
+  <div
+    class="d-flex flex-column justify-content-center align-items-center info"
+  >
+    <h3>
+      Una <strong><span>plataforma de avalúos</span> diseñada acorde</strong> a tus
+      necesidades y las del mercado
+    </h3>
+    <a class="btn btn-primary text-center" href="#Pricing">Ver planes</a>
+    <img
+      class="info_img"
+      src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_page_empresas_1.jpg?alt=media&token=fcfa3e1b-1f84-4f4b-8b28-31aa6fd2794b"
+      alt="banner empresas avaluo en linea"
+    />
+    <h4>
+      En Avalúo en Línea te ofrecemos en cada uno de nuestros planes <span
+        >creación de reportes y acceso a nuestra plataforma</span
+      >
+    </h4>
+  </div>
+  <div id="Solutions" class="solutions">
+    <p class="solutions_title text-center">¿Qué incluye el reporte?</p>
+    <div class="row solutions_items mt-5 d-flex justify-content-center">
+      <div class="col-12 col-md-6 p-2 order-2 order-md-1">
+        <img
+          class="solutions_img"
+          src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_page_empresas_2.jpg?alt=media&token=55e6c1f7-1e13-4308-b63d-fb533dbde4e7"
+          alt="que incluye?"
+        />
+      </div>
+      <div class="col-12 col-md-6 p-2 order-1 order-md-2">
+        <ItemsSolutions />
+        <div>
+          <p class="footnote-solutions my-4">
+            <span>*</span>Estas características solo aplican para el reporte
+            completo
+          </p>
+          <div
+            class="row d-flex justify-content-start align-items-center gap-2 gap-md-1"
+          >
+            <a class="col-12 col-md-4 btn-download btn" href=""
+              >Descargar ejemplo</a
+            >
+            <a class="col-12 col-md-3 btn-view btn btn-primary" href=""
+              >Ver planes</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="solutions_title text-center">¿Qué puedes hacer en la plataforma?</p>
+  <div
+    class="d-flex flex-wrap flex-column flex-md-row justify-content-center align-items-center mt-5 shadow-lg cards-features"
+  >
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FFrame%20310.svg?alt=media&token=c115ea33-5f1d-4656-ad6d-2bd7592b0776"
+      FeaturesTitle="Generar un reporte"
+      FeaturesText="Dependiendo de tu plan puedes generar un reporte informativo o completo de cualquier inmueble"
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FFrame%20310%20(1).svg?alt=media&token=ac144822-b167-42f0-aaca-d340fcbd3234"
+      FeaturesTitle="Histórico de reportes"
+      FeaturesText="Puedes ver los reportes generados y volver a descargarlos si lo necesitas"
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FFrame%20310%20(2).svg?alt=media&token=76b4366f-a8f8-4f1f-bfa7-a97fea4a626e"
+      FeaturesTitle="Mapa de búsqueda"
+      FeaturesText="Usa nuestro mapa para encontrar los inmuebles del sector."
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FFrame%20310%20(3).svg?alt=media&token=f2e90b8e-7f4c-4c96-88a2-e6d344094a0a"
+      FeaturesTitle="Personaliza tus reportes"
+      FeaturesText="Genera reportes personalizados con tu marca, logotipo y colores para tus clientes."
+    />
+    <CardsFeatures
+      client:visible
+      FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2FFrame%20310%20(4).svg?alt=media&token=037fa7e3-0ab6-4ecd-9f5d-81c2480c336a"
+      FeaturesTitle="Análisis Comparativo del Mercado"
+      FeaturesText="Genera análisis comparativos del mercado, así tus agentes tienen más herramientas."
+    />
+    <div class="solutions-more">
+      <p class="solutions-more_title">
+        ¡Y muchas funcionalidades más! ¿Qué esperas?
+      </p>
+      <div class="row d-flex justify-content-around">
+        <a class="col-12 col-md-5 btn-download btn" href="">Ver planes</a>
+        <a class="col-12 col-md-5 btn-view btn btn-primary" href="">Ingresa</a>
+      </div>
+    </div>
+  </div>
+   <!-- Pricing -->
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+      </div>
+    </div>
+    <div class="col-12 col-md-3">
+      <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+        <div class="border">Hola soy uno</div>
+      </div>
+    </div>
+  </div>
+  
+   <!-- Contact Form -->
+<ContactForm id="contactForm" client:visible />
 </Layout>
+<style scoped>
+  .info {
+    background-color: #ffffff;
+  }
+  .info_img {
+    width: 90%;
+    max-width: 250px;
+    margin: 96px auto 24px auto;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #282a33;
+    width: 90%;
+    max-width: 600px;
+    margin: 96px auto 24px auto;
+  }
+
+  h4 {
+    font-family: "Comfortaa";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #282a33;
+    width: 90%;
+    max-width: 800px;
+  }
+  span {
+    color: #ca1d80;
+  }
+  .solutions_img {
+    width: 100%;
+    max-width: 611px;
+  }
+  .btn {
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
+  }
+  .btn-download {
+    background: #f9e6f1;
+    color: #8b1458;
+    padding: 13px 22px;
+  }
+  .btn-view {
+    background: #ca1d80;
+    color: #ffffff;
+    padding: 13px 22px;
+  }
+  .solutions {
+    margin: 120px auto;
+    width: 100%;
+    max-width: 1250px;
+  }
+  .solutions_title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
+  .footnote-solutions {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+  }
+  .footnote-solutions span {
+    color: #ca1d80;
+  }
+
+  .cards-features {
+    background: #ffffff;
+    border: 2px solid #f6f7fa;
+    border-radius: 24px;
+    width: 100%;
+  }
+  .solutions-more {
+    width: 100%;
+    max-width: 417px;
+    padding: 40px 32px 10px 32px;
+    border-radius: none;
+    border: none;
+    background: rgba(249, 230, 241, 0.5);
+  }
+  .solutions-more_title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #282a33;
+  }
+</style>

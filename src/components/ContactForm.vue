@@ -52,7 +52,7 @@
             </div>
             <div class="row g-3 d-flex justify-content-center mt-1">
                 <div class="col-12 col-md-6">
-                    <input class="btn-submit" type="submit" value="Enviar" />
+                    <input class="btn btn-primary" type="submit" value="Enviar" />
                 </div>
             </div>
         </form>
@@ -119,32 +119,20 @@ registro completo
     line-height: 2.5;
 }
 
-.btn-submit {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.btn {
+    font-family: 'Source Sans Pro';
+    border-radius: 32px;
     font-weight: 600;
     font-size: 16px;
-    padding: 14px 24px;
-    width: 104px;
-    height: 48px;
-    border-radius: 32px;
-    text-decoration: none;
-    cursor: pointer;
-    margin: auto 16px;
-    background-color: #ca1d80;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
     color: #FFFFFF;
-    border: 2px solid #FFFFFF;
+    padding: 14px 24px;
 
 }
 
-.btn-submit:hover {
-    color: #282A33;
-    border: 2px solid #282A33;
-    background-color: #FFFFFF;
 
-}
 @media (max-width: 992px) {
     .contact-form_img {
     display: block;
