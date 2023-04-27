@@ -1050,8 +1050,8 @@ textarea.form-control {
   display: none !important;
 }
 
-.shadow-lg {
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
 .position-relative {
@@ -1179,8 +1179,16 @@ textarea.form-control {
   margin-left: auto !important;
 }
 
+.p-0 {
+  padding: 0 !important;
+}
+
 .p-2 {
   padding: 0.5rem !important;
+}
+
+.p-5 {
+  padding: 3rem !important;
 }
 
 .px-2 {
@@ -1237,8 +1245,21 @@ textarea.form-control {
   .mt-md-1 {
     margin-top: 0.25rem !important;
   }
+  .p-md-0 {
+    padding: 0 !important;
+  }
+  .p-md-2 {
+    padding: 0.5rem !important;
+  }
   .p-md-4 {
     padding: 1.5rem !important;
+  }
+  .p-md-5 {
+    padding: 3rem !important;
+  }
+  .px-md-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
   }
   .gap-md-1 {
     gap: 0.25rem !important;

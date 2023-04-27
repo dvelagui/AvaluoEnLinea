@@ -4,6 +4,7 @@ import ItemsSolutions from "../components/ItemsSolutions.vue";
 import CardsFeatures from "../components/CardsFeatures.vue";
 import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
+import PricingAvaluo from "../components/PricingAvaluo.vue";
 ---
 
 <Layout pageTitle="Empresas">
@@ -47,7 +48,7 @@ import Layout from "../layouts/layouts.astro";
           alt="que incluye?"
         />
       </div>
-      <div class="col-12 col-md-6 p-2 order-1 order-md-2">
+      <div class="col-12 col-md-6 p-5 p-md-2 order-1 order-md-2">
         <ItemsSolutions />
         <div>
           <p class="footnote-solutions my-4">
@@ -70,7 +71,7 @@ import Layout from "../layouts/layouts.astro";
   </div>
   <p class="solutions_title text-center">¿Qué puedes hacer en la plataforma?</p>
   <div
-    class="d-flex flex-wrap flex-column flex-md-row justify-content-center align-items-center mt-5 shadow-lg cards-features"
+    class="d-flex flex-wrap flex-column flex-md-row justify-content-center align-items-center my-5 shadow cards-features"
   >
     <CardsFeatures
       client:visible
@@ -107,61 +108,23 @@ import Layout from "../layouts/layouts.astro";
         ¡Y muchas funcionalidades más! ¿Qué esperas?
       </p>
       <div class="row d-flex justify-content-around">
-        <a class="col-12 col-md-5 btn-download btn" href="">Ver planes</a>
+        <a class="col-12 col-md-5 btn-download btn" href="#Pricing">Ver planes</a>
         <a class="col-12 col-md-5 btn-view btn btn-primary" href="">Ingresa</a>
       </div>
     </div>
   </div>
-   <!-- Pricing -->
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-3">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-      </div>
-    </div>
-    <div class="col-12 col-md-3">
-      <div class="d-flex flex-column justify-content-center align-items-center">
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-        <div class="border">Hola soy uno</div>
-      </div>
-    </div>
+  <!-- Pricing -->
+  <div class="pricing">
+    <p class="pricing_title text-center ">Escoge tu plan</p>
+    <p class="pricing_subtitle text-center">
+      Te ofrecemos estos planes para tu empresa, pero si necesitas algo más
+      acorde a tus necesidades, <a href="#contactForm">contáctanos</a>
+    </p>
+    <PricingAvaluo id="Pricing" client:visible />
   </div>
-  
-   <!-- Contact Form -->
-<ContactForm id="contactForm" client:visible />
+
+  <!-- Contact Form -->
+  <ContactForm id="contactForm" client:visible />
 </Layout>
 <style scoped>
   .info {
@@ -227,12 +190,24 @@ import Layout from "../layouts/layouts.astro";
     width: 100%;
     max-width: 1250px;
   }
-  .solutions_title {
+  .solutions_title,
+  .pricing_title {
     font-weight: 600;
     font-size: 40px;
     line-height: 100%;
     letter-spacing: -0.01em;
     color: #000000;
+  }
+  .pricing_subtitle {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+  }
+  .pricing_subtitle a {
+    text-decoration: none;
+    color: #ca1d80;
   }
   .footnote-solutions {
     font-weight: 600;
@@ -266,5 +241,8 @@ import Layout from "../layouts/layouts.astro";
     text-align: center;
     letter-spacing: -0.01em;
     color: #282a33;
+  }
+  .pricing {
+margin-top: 96px;
   }
 </style>

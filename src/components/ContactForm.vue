@@ -1,5 +1,5 @@
 <template>
-    <div class="contact-form mt-5 mb-5">
+    <div class="contact-form mt-5 mb-5 px-2 px-md-0">
         <div class="row d-flex justify-content-center">
             <div class=" col-12 col-md-6">
                 <img class="contact-form_img my-1" src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Farrow_right.svg?alt=media&token=1397e239-f6b6-4828-9c3b-1b45696d6415" alt="Contact">
