@@ -22,11 +22,11 @@ import PricingAvaluo from "../components/PricingAvaluo.vue";
   <div
     class="d-flex flex-column justify-content-center align-items-center info"
   >
-    <h3>
+    <h3 class="title-info">
       Una <strong><span>plataforma de avalúos</span> diseñada acorde</strong> a tus
       necesidades y las del mercado
     </h3>
-    <a class="btn btn-primary text-center" href="#Pricing">Ver planes</a>
+    <a class="btn-view btn btn-primary text-center" href="#Pricing">Ver planes</a>
     <img
       class="info_img"
       src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_page_empresas_1.jpg?alt=media&token=fcfa3e1b-1f84-4f4b-8b28-31aa6fd2794b"
@@ -135,7 +135,7 @@ import PricingAvaluo from "../components/PricingAvaluo.vue";
     max-width: 250px;
     margin: 96px auto 24px auto;
   }
-  h3 {
+  .title-info {
     font-weight: 400;
     font-size: 32px;
     line-height: 100%;
@@ -165,8 +165,7 @@ import PricingAvaluo from "../components/PricingAvaluo.vue";
     width: 100%;
     max-width: 611px;
   }
-  .btn {
-    font-family: "Source Sans Pro";
+  .btn-plan-price {
     border-radius: 32px;
     font-weight: 600;
     font-size: 16px;
@@ -179,11 +178,27 @@ import PricingAvaluo from "../components/PricingAvaluo.vue";
     background: #f9e6f1;
     color: #8b1458;
     padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
   }
   .btn-view {
     background: #ca1d80;
     color: #ffffff;
     padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
   }
   .solutions {
     margin: 120px auto;
