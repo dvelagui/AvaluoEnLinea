@@ -38,7 +38,32 @@ body {
     scroll-behavior: smooth;
   }
 }
-
+.btn-download {
+  background: #f9e6f1;
+  color: #8b1458;
+  padding: 13px 22px;
+  font-family: "Source Sans Pro";
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  padding: 14px 24px;
+}
+.btn-view {
+  background: #ca1d80;
+  color: #ffffff;
+  padding: 13px 22px;
+  font-family: "Source Sans Pro";
+  border-radius: 32px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: -0.01em;
+  padding: 14px 24px;
+}
 body {
   margin: 0;
   line-height: 1.5;

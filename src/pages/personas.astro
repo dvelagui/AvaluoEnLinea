@@ -1,5 +1,8 @@
 ---
+import features from "../data/features.json"
+import CardsSolutions from "../components/CardsSolutions.vue";
 import HeroBannerAvaluo from "../components/HeroBannerAvaluo.vue";
+import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
 ---
 
@@ -11,4 +14,163 @@ import Layout from "../layouts/layouts.astro";
     imgBanner="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_personas.png?alt=media&token=2dd1445d-04b4-4993-bb7a-042f7d89673b"
     imgBannerMobile="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_personas_movil.png?alt=media&token=208eb77a-2606-4133-834f-1fd3d0043f23"
   />
+  <!-- Content Personas -->
+
+  <div
+    class="d-flex flex-column justify-content-center align-items-center info"
+  >
+    <h3 class="title-info">
+      <strong
+        >En solo <span>3 pasos</span> conoce el precio justo de un inmueble,</strong
+      > no importa si quieres comprarlo, venderlo o arrendarlo.
+    </h3>
+    <a class="btn btn-view btn-primary text-center" href="#ContactForm"
+      >Avaluar mi inmueble</a
+    >
+  </div>
+  <p class="title text-center my-5">¿Qué verías en tu reporte?</p>
+  {
+    features.map((feature) => (
+      feature.report === 'personas' ? <CardsSolutions step-img={feature.img} step-text={feature.text} step-ast={feature.ast} />  : ""  
+    
+    ))
+    }
+  <div class="row mt-5 text-center">
+    <p class="footnote col-12">
+      <span>*</span> Estas características solo aplican para el reporte completo
+    </p>
+  </div>
+  <div class="row d-flex justify-content-center align-items-center p-5 p-md-2">
+      <a class="col-12 col-md-2 btn btn-download mx-2" href="/empresas#Pricing">Descargar ejemplo</a>
+      <a class="col-12 col-md-2 btn btn-view btn-primary mx-2 mt-3 mt-md-0" href="#ContactForm"
+      >Avaluar mi inmueble</a
+    >
+  </div>
+  <!--   Request Report -->
+  <div
+    class="request-report d-flex flex-column justify-content-center align-items-center mt-5"
+  >
+    <p class="request-report_text text-center">
+      ¿Necesitas un avalúo certificado. Fácil, rápido y firmado por un perito
+      registrado? Podemos ayudarte
+    </p>
+    <a class="request-report_btn" href="#ContactForm"
+      >Solicitar avalúo certificado</a
+    >
+  </div>
+  <ContactForm id="ContactForm" client:visible />
+  <style lang="scss" scoped>
+    .title-info {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      text-align: center;
+      letter-spacing: -0.01em;
+      color: #282a33;
+      width: 90%;
+      max-width: 750px;
+      margin: 96px auto 24px auto;
+    }
+    span {
+      color: #ca1d80;
+    }
+    .btn-view {
+      background: #ca1d80;
+      color: #ffffff;
+      padding: 13px 22px;
+      font-family: "Source Sans Pro";
+      border-radius: 32px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: -0.01em;
+      padding: 14px 24px;
+    }
+    .request-report {
+      background-image: url("../assets/imgs/banner_request_report.png");
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100% 100%;
+    }
+
+    .request-report_text {
+      font-family: "Comfortaa";
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: -0.04em;
+      color: #ffffff;
+      margin: 72px auto 32px auto;
+      width: 100%;
+      max-width: 573px;
+      min-width: 311px;
+    }
+
+    .request-report_btn {
+      width: 100%;
+      max-width: 228px;
+      color: #282a33;
+      padding: 14px 24px;
+      border: 2px solid #282a33;
+      border-radius: 32px;
+      text-decoration: none;
+      cursor: pointer;
+      margin: 32px auto 200px auto;
+      font-size: 14px;
+      background-color: #ffffff;
+      text-align: center;
+      font-weight: 600;
+    }
+    .footnote {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+      color: #6B7082;
+    }
+    .btn-download {
+    background: #f9e6f1;
+    color: #8b1458;
+    padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
+  }
+  .btn-view {
+    background: #ca1d80;
+    color: #ffffff;
+    padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
+  }
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
+    @media (max-width: 992px) {
+      .request-report_text {
+        font-size: 20px;
+      }
+      .title {
+        font-size: 32px;
+      }
+    }
+  </style>
 </Layout>
