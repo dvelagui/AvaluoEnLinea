@@ -7,7 +7,7 @@
             <h2 class="hero-banner_subtitle">{{ subtitleBanner }}</h2>
             <div class="row d-flex flex-row justify-content-center align-items-center mt-5">              
                     <a class="mx-2 btn btn-primary" :class="btnBanner2 ? 'col-4 col-md-2' : 'col-6 col-md-4'" href="#Solutions">{{ btnBanner1 }}</a>     
-                    <a class="col-4 col-md-2 mx-2 btn hero-banner_btn2" :style="btnBanner2 ? ' ' : 'display:none'" href="#Pricing">{{ btnBanner2 }}</a>              
+                    <a class="col-4 col-md-2 mx-2 btn hero-banner_btn2" v-if="btnBanner2" href="#Pricing">{{ btnBanner2 }}</a>              
             </div>
         </div>
     </div>

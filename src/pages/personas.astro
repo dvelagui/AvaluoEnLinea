@@ -29,12 +29,14 @@ import Layout from "../layouts/layouts.astro";
     >
   </div>
   <p class="title text-center my-5">¿Qué verías en tu reporte?</p>
+  <div class="row d-flex justify-content-center">
   {
     features.map((feature) => (
       feature.report === 'personas' ? <CardsSolutions step-img={feature.img} step-text={feature.text} step-ast={feature.ast} />  : ""  
     
     ))
     }
+  </div>
   <div class="row mt-5 text-center">
     <p class="footnote col-12">
       <span>*</span> Estas características solo aplican para el reporte completo
@@ -59,6 +61,7 @@ import Layout from "../layouts/layouts.astro";
     >
   </div>
   <ContactForm id="ContactForm" client:visible />
+</Layout>
   <style lang="scss" scoped>
     .title-info {
       font-weight: 400;

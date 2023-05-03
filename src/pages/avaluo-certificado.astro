@@ -1,6 +1,7 @@
 ---
-import features from "../data/features.json"
+import features from "../data/features.json";
 import CardsSolutions from "../components/CardsSolutions.vue";
+import CardsFeatures from "../components/CardsFeatures.vue";
 import HeroBannerAvaluo from "../components/HeroBannerAvaluo.vue";
 import ContactForm from "../components/ContactForm.vue";
 import Layout from "../layouts/layouts.astro";
@@ -14,22 +15,123 @@ import Layout from "../layouts/layouts.astro";
     imgBanner="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_avaluo.png?alt=media&token=7a9e84f9-8624-4804-b6d3-d9de30c5fca2"
     imgBannerMobile="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_avaluo_movil.png?alt=media&token=85b7db44-ad79-4c83-90bc-720b8350ccfb"
   />
-  <p class="title text-center my-5">¿Para que puedes usar el avalúo certificado?</p>
-  {
-    features.map((feature) => (
-      feature.report === 'avaluo' ? <CardsSolutions step-img={feature.img} step-text={feature.text} step-ast={feature.ast} />  : ""  
-    
-    ))
-    }
 
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 p-2 order-2 order-md-1">
+      <img
+        src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_pag_avaluo.png?alt=media&token=36798e3b-c4c7-48f3-8d19-0dffef90626c"
+        alt="Avaluo Certificado"
+      />
+    </div>
+    <div class="col-12 col-md-6 order-1 order-md-0">
+      <div class="d-flex flex-column justify-content-between">
+        <div>
+          <h3>¿Qué es un avalúo certificado?</h3>
+          <p>Un avalúo es la actividad, por medio de la cual se determina el valor de un bien inmueble. </p>
+          <p>La cual aplica métodos y técnicas validas y es suscrita por un avaluador reconocido ante el Registro Abierto de Avaluadores. </p>
+        </div>
+        <div>
+          <h3>¿Qué incluye un avalúo certificado?</h3>
+          <div class="solutions_items"
+            class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+            <img class="solutions_img"
+                src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fitem.svg?alt=media&token=0446a22a-b096-424a-a9e7-16c8aae16f03"
+                alt="items" />
+            <p class="solutions_item">
+              Inspección física del bien con o sin verificación de medidas
+            </p>
+        </div>
+        <div class="solutions_items"
+            class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+            <img class="solutions_img"
+                src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fitem.svg?alt=media&token=0446a22a-b096-424a-a9e7-16c8aae16f03"
+                alt="items" />
+            <p class="solutions_item">
+              Inspección física del bien con o sin verificación de medidas
+            </p>
+        </div>
+        <div class="solutions_items"
+            class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+            <img class="solutions_img"
+                src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fitem.svg?alt=media&token=0446a22a-b096-424a-a9e7-16c8aae16f03"
+                alt="items" />
+            <p class="solutions_item">
+              Inspección física del bien con o sin verificación de medidas
+            </p>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="title text-center my-5">
+    ¿Para que puedes usar el avalúo certificado?
+  </p>
+  <div class="row d-flex justify-content-center">
+    {
+      features.map((feature) =>
+        feature.report === "avaluo" ? (
+          <CardsSolutions
+            step-img={feature.img}
+            step-text={feature.text}
+            step-ast={feature.ast}
+          />
+        ) : (
+          ""
+        )
+      )
+    }
+  </div>
   <div class="row d-flex justify-content-center align-items-center p-5 p-md-2">
-      <a class="col-12 col-md-2 btn btn-download mx-2" href="/empresas#Pricing">Descargar ejemplo</a>
-      <a class="col-12 col-md-2 btn btn-view btn-primary mx-2 mt-3 mt-md-0" href="#ContactForm"
-      >Avaluar mi inmueble</a
+    <a class="col-12 col-md-2 btn btn-download mx-2" href="/empresas#Pricing"
+      >Descargar ejemplo</a
+    >
+    <a
+      class="col-12 col-md-2 btn btn-view btn-primary mx-2 mt-3 mt-md-0"
+      href="#ContactForm">Avaluar mi inmueble</a
     >
   </div>
-  <ContactForm id="ContactForm" client:visible />
+  <div class=" my-5 shadow cards-features">
 
+    <p class="solutions_title text-center">¿Cómo funciona?</p>
+   <div
+     class="d-flex flex-column flex-md-row justify-content-center align-items-center"
+   >
+     <CardsFeatures
+       client:visible
+       FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2F1.svg?alt=media&token=0bd6cc23-d955-4c51-b054-1a4fb94c9dc9"
+       FeaturesTitle="Llena el formulario"
+       FeaturesText="Diligencia el formulario con los datos del inmueble que quieres avaluar"
+     />
+     <CardsFeatures
+       client:visible
+       FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2F2.svg?alt=media&token=0b9392db-0adb-4ee3-90d1-9f325c503508"
+       FeaturesTitle="Cotización"
+       FeaturesText="Un asesor se comunicará contigo y te enviará una cotización detallada"
+     />
+     <CardsFeatures
+       client:visible
+       FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2F3.svg?alt=media&token=97cbadeb-7c87-4b58-9393-1bbb9bccad6d"
+       FeaturesTitle="Paga el servicio"
+       FeaturesText="Por medio de nuestra plataforma de pagos paga el avalúo para agendarlo"
+     />
+     <CardsFeatures
+       client:visible
+       FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2F4.svg?alt=media&token=f5cabe69-65b1-4f85-bb4b-73d4d49e1b28"
+       FeaturesTitle="Agenda la cita"
+       FeaturesText="Uno de nuestros asesores se comunicará contigo para agendar el avalúo"
+     />
+     <CardsFeatures
+       client:visible
+       FeaturesImg="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2F5.svg?alt=media&token=5041eab7-94d3-4416-b310-f53ed2cf15d9"
+       FeaturesTitle="Informe"
+       FeaturesText="De 3 a 8 días calendario luego de la visita, recibirás tu avalúo"
+     />
+     
+   </div>
+  </div>
+  <ContactForm id="ContactForm" client:visible />
 </Layout>
 <style scoped lang="scss">
   .title {
@@ -39,7 +141,7 @@ import Layout from "../layouts/layouts.astro";
     letter-spacing: -0.01em;
     color: #000000;
   }
-    .btn-download {
+  .btn-download {
     background: #f9e6f1;
     color: #8b1458;
     padding: 13px 22px;
@@ -65,9 +167,29 @@ import Layout from "../layouts/layouts.astro";
     letter-spacing: -0.01em;
     padding: 14px 24px;
   }
-    @media (max-width: 992px) {
-      .title {
-        font-size: 32px;
-      }
+
+  .solutions_item {
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #282a33;
+    margin: 0;
+}
+
+.solutions_img {
+    width: 24px;
+    margin: auto 10px;
+}
+
+.cards-features {
+    background: #ffffff;
+    border: 2px solid #f6f7fa;
+    border-radius: 24px;
+    width: 100%;
+  }
+  @media (max-width: 992px) {
+    .title {
+      font-size: 32px;
     }
+  }
 </style>

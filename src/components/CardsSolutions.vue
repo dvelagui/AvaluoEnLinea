@@ -1,10 +1,9 @@
 <template>
-    <div class="row d-flex justify-content-center">
+   
         <div class="col-12 col-md-3 d-flex justify-content-start align-items-center shadow steps">
             <img :src="stepImg" :alt="stepText">
             <p>{{ stepText }}<span v-show="stepAst === 'true'"> *</span></p>
         </div>
-    </div>
 </template>
 
 <script setup>

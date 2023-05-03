@@ -131,6 +131,9 @@ registro completo
     padding: 14px 24px;
 
 }
+.form-check-input {
+    border: 1px solid #ca1d80;
+}
 
 
 @media (max-width: 992px) {

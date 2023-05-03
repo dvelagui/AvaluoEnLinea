@@ -16,12 +16,16 @@ import Layout from "../layouts/layouts.astro";
   />
 
 <p class="title text-center my-5">Beneficios de nuestra API</p>
+<div class="row d-flex justify-content-center">
+
 {
 features.map((feature) => (
   feature.report === 'Api' ? <CardsSolutions step-img={feature.img} step-text={feature.text} step-ast={feature.ast} />  : ""  
 
 ))
 }
+</div>
+
 <div class="row d-flex justify-content-center align-items-center p-5 p-md-2">
     <a class="col-12 btn btn-view btn-primary mx-2 mt-3 mt-md-0" href="#ContactForm"
     >¡Lo quiero!</a
