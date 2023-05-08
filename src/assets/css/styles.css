@@ -1144,6 +1144,11 @@ textarea.form-control {
   margin-left: 0.5rem !important;
 }
 
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
 .my-1 {
   margin-top: 0.25rem !important;
   margin-bottom: 0.25rem !important;
@@ -1257,9 +1262,6 @@ textarea.form-control {
   }
   .flex-md-row {
     flex-direction: row !important;
-  }
-  .order-md-0 {
-    order: 0 !important;
   }
   .order-md-1 {
     order: 1 !important;

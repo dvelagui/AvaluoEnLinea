@@ -1,5 +1,5 @@
 ---
-import features from "../data/features.json"
+import features from "../data/features.json";
 import CardsSolutions from "../components/CardsSolutions.vue";
 import HeroBannerAvaluo from "../components/HeroBannerAvaluo.vue";
 import ContactForm from "../components/ContactForm.vue";
@@ -14,64 +14,128 @@ import Layout from "../layouts/layouts.astro";
     imgBanner="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_API.png?alt=media&token=9c5c6de7-8aad-4823-98ef-744c260cc742"
     imgBannerMobile="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimg_hero_API_movil.png?alt=media&token=b482fe02-a76c-4c91-8a2d-aefc04c8bb70"
   />
-
-<p class="title text-center my-5">Beneficios de nuestra API</p>
-<div class="row d-flex justify-content-center">
-
-{
-features.map((feature) => (
-  feature.report === 'Api' ? <CardsSolutions step-img={feature.img} step-text={feature.text} step-ast={feature.ast} />  : ""  
-
-))
-}
+  <div class="text-center api">
+    <h3 class="api_h3">API Avalúo en línea</h3>
+    <p class="api_p mt-3">
+      La API Avalúo en Línea es un conjunto de reglas y herramientas que permite
+      a diferentes aplicaciones y sistemas interactuar con el servicio de
+      valoración en línea de Avalúo en Línea.
+    </p>
+    <p class="api_p">
+      Al utilizar esta API, los usuarios pueden acceder a los datos de vivienda
+      en tiempo real, ahorrar tiempo y esfuerzo en tareas manuales repetitivas,
+      ampliar las funcionalidades de sus aplicaciones, mejorar la calidad de los
+      datos y reducir los costos de desarrollo.
+    </p>
+    <a class="col-12 col-md-5 btn btn-view btn-primary mt-3" href="#ContactForm"
+      >¡Lo quiero!</a
+    >
+  </div>
+  <div class="text-center my-5">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/quasar-chat-285ff.appspot.com/o/Avaluo%2Fimage%2012.png?alt=media&token=e9fc8a1b-26f1-459e-ad3e-bba531a74eea"
+      alt="Api"
+      class="my-5"
+    />
+  </div>
+  <div class="text-center api my-5">
+    <h3 class="api_h3">¿Cómo puedes usar la API?</h3>
+    <p class="api_p mt-3">
+      Ejemplos de usos de la API incluyen la valoración masiva periódica
+      inmuebles en consignación, garantías hipotecarias o inversiones
+      inmobiliarias.
+    </p>
+    <a class="col-12 col-md-5 btn btn-view btn-primary mt-3" href="#ContactForm"
+      >¡Lo quiero!</a
+    >
+  </div>
+  <div class="row d-flex justify-content-center benefits">
+    <p class="title text-center ">Beneficios de nuestra API</p>
+    {
+      features.map((feature) =>
+        feature.report === "Api" ? (
+          <CardsSolutions
+            step-img={feature.img}
+            step-text={feature.text}
+            step-ast={feature.ast}
+          />
+        ) : (
+          ""
+        )
+      )
+    }
+ <div
+ class="row d-flex justify-content-center align-items-center text-center api"
+>
+ <a class="col-12 col-md-5 btn btn-view btn-primary" href="#ContactForm"
+   >¡Lo quiero!</a
+ >
 </div>
+  </div>
 
-<div class="row d-flex justify-content-center align-items-center p-5 p-md-2">
-    <a class="col-12 btn btn-view btn-primary mx-2 mt-3 mt-md-0" href="#ContactForm"
-    >¡Lo quiero!</a
-  >
-</div>
-<ContactForm id="ContactForm" client:visible />
-
+ 
+  <ContactForm id="ContactForm" client:visible />
 </Layout>
 <style scoped lang="scss">
-.title {
-  font-weight: 600;
-  font-size: 40px;
-  line-height: 100%;
-  letter-spacing: -0.01em;
-  color: #000000;
-}
+  .title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000000;
+  }
   .btn-download {
-  background: #f9e6f1;
-  color: #8b1458;
-  padding: 13px 22px;
-  font-family: "Source Sans Pro";
-  border-radius: 32px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: -0.01em;
-  padding: 14px 24px;
-}
-.btn-view {
-  background: #ca1d80;
-  color: #ffffff;
-  padding: 13px 22px;
-  font-family: "Source Sans Pro";
-  border-radius: 32px;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 18px;
-  text-align: center;
-  letter-spacing: -0.01em;
-  padding: 14px 24px;
-}
+    background: #f9e6f1;
+    color: #8b1458;
+    padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
+  }
+  .btn-view {
+    background: #ca1d80;
+    color: #ffffff;
+    padding: 13px 22px;
+    font-family: "Source Sans Pro";
+    border-radius: 32px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    padding: 14px 24px;
+  }
+  .api {
+    width: 100%;
+    max-width: 600px;
+    margin: 64px auto 8px auto;
+  }
+  .api_h3 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #282a33;
+  }
+  .api_p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: #6b7082;
+  }
+  .benefits {
+    margin: 100px auto;
+  }
   @media (max-width: 992px) {
     .title {
       font-size: 32px;
     }
   }
 </style>
-

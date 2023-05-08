@@ -6,7 +6,7 @@
             <h2 class="hero-banner_title">{{ titleBanner }}</h2>
             <h2 class="hero-banner_subtitle">{{ subtitleBanner }}</h2>
             <div class="row d-flex flex-row justify-content-center align-items-center mt-5">              
-                    <a class="mx-2 btn btn-primary" :class="btnBanner2 ? 'col-4 col-md-2' : 'col-6 col-md-4'" href="#Solutions">{{ btnBanner1 }}</a>     
+                    <a class="mx-2 btn btn-primary" :class="btnBanner2 ? 'col-4 col-md-2' : 'btn-hero'" href="#Solutions">{{ btnBanner1 }}</a>     
                     <a class="col-4 col-md-2 mx-2 btn hero-banner_btn2" v-if="btnBanner2" href="#Pricing">{{ btnBanner2 }}</a>              
             </div>
         </div>
@@ -85,6 +85,10 @@ const { titleBanner, subtitleBanner, btnBanner1, btnBanner2, imgBanner } = toRef
     display: none;
 }
 
+.btn-hero {
+    width: 200px;
+}
+
 @media (max-width: 992px) {
     .hero-banner_img {
     display: none;
@@ -93,5 +97,6 @@ const { titleBanner, subtitleBanner, btnBanner1, btnBanner2, imgBanner } = toRef
     display: block;
     width: 100%;
 }
+
 }
 </style>
